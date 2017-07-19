@@ -6,8 +6,8 @@ var div;
 // retrieves songs from server
 function getSongs() {
     var http = new XMLHttpRequest();
-    // http.open('GET', 'https://codenewbiedemo.cfapps.io/hello', false);
-    http.open('GET', 'http://localhost:8080/hello', false);
+    http.open('GET', 'https://codenewbiedemo.cfapps.io/hello', false);
+    // http.open('GET', 'http://localhost:8080/hello', false);
     http.setRequestHeader('Content-type', 'application/json');
     http.send();
     console.log('Plain JS Http Response', http.responseText);
@@ -78,7 +78,8 @@ function addRow(song) {
 // sends a song to the server, receives song list response
 function addSong() {
     var http = new XMLHttpRequest();
-    http.open('POST', 'http://localhost:8080/addSong?seconds=' + addSection.seconds.value +
+    // http.open('POST', 'http://localhost:8080/addSong?seconds=' + addSection.seconds.value +
+    http.open('POST', 'https://codenewbiedemo.cfapps.io/addSong?seconds=' + addSection.seconds.value +
         '&name=' + addSection.nameInput.value +
         '&artist=' + addSection.artistInput.value, false);
     http.setRequestHeader('Content-type', 'application/json');
