@@ -1,24 +1,36 @@
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
 
 <head>
+    <!-- added bootstrap!!:)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- responsive meta tags this adjust size of site 
+        so it will look good mobile first and scale up to web second-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../css/main.css">
+    <!--quick question why is the 
+    js file in the head?
+    doesn't run faster at the end of the body tag. just curious-->
     <script type="text/javascript" src="../js/test.js"></script>
 </head>
 
 <body onload="loadSongs()">
-    <h1>Music Playlist</h1>
-    <label for="searchBar">Search</label>
-    <input type="text" id="searchBar" onkeyup="searchSongs()">
-    <table>
-        <tr>
-            <th>Artist</th>
-            <th>Name</th>
-            <th>Seconds</th>
-        </tr>
-        <tbody id="searchListing">
-        </tbody>
-    </table>
 
+    <div class="block">
+        <h1>Music Playlist</h1>
+        <label for="searchBar">Search</label>
+        <input type="text" id="searchBar" onkeyup="searchSongs()">
+        <table>
+            <tr>
+                <th>Artist</th>
+                <th>Name</th>
+                <th>Seconds</th>
+            </tr>
+            <tbody id="searchListing">
+            </tbody>
+        </table>
+    </div>
     <hr>
     <div id="newSong">
         <!--<label for="nameInput"></label>

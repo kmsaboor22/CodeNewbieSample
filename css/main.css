@@ -1,14 +1,41 @@
-h1{
-    color: red;
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+body {
+    background-color: #51c993;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: black;
+    /* pull title down lower by adjusting the margin*/
+    margin-top: 40px;
     text-align: center;
 }
 
-table, th, td{
-    border: 1px solid black;
-    border-collapse: collapse;
+
+/* block like container*/
+
+.block {
+    opacity: .7;
+    background-color: white;
+    padding: 50px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 20px;
 }
 
-table{
+table,
+th,
+td {
+    color: black;
+    border: 3px solid black;
+    border-collapse: collapse;
+    font-family: 'Quicksand', sans-serif;
+}
+
+table {
     min-width: 50%;
     table-layout: auto;
     font-size: 24px;
